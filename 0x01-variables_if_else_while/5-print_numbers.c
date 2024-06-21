@@ -16,7 +16,7 @@ int main(void)
 
 	while (number <= 9)
 	{
-	puts(number);
+	printf("%d", number);
 	number++;
 	}
 	putchar('\n');
