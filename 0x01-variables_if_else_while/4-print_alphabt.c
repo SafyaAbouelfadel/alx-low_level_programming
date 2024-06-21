@@ -17,11 +17,15 @@ int main(void)
 
 	while (ch <= 'z')
 	{
-		if (ch != 'e' || ch != 'q')
-			putchar(ch);
+		if (ch == 'e' || ch == 'q')
+		{
 			ch++,
+		}
 		else
+		{
+			putchar(ch);
 			ch++;
+		}
 	}
 	putchar('\n');
 
