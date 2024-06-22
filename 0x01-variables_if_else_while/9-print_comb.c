@@ -17,9 +17,16 @@ int main(void)
 	while (number <= 57)
 	{
 		putchar(number);
-		putchar(',');
-		putchar(' ');
-		number++;
+		if (number < 57)
+		{
+			putchar(',');
+			putchar(' ');
+			number++;
+		}
+		else
+		{
+			number++
+		}
 
 	}
 	putchar('\n');
