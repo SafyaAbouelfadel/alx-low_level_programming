@@ -20,13 +20,13 @@ int main(void)
 		putchar(num1);
 	while (num2 <= 57)
 	{
-		if (num1 >= num2)
+		if (num1 <= num2)
 		{
+			putchar(num2);
 			num2++;
 		}
 		else
 		{
-			putchar(num2);
 			num2++;
 		}
 	}
