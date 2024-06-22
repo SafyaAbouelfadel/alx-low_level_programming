@@ -12,11 +12,11 @@ int main(void)
 {
 	int number;
 
-	number = 0;
+	number = 30;
 
 	while (number <= 9)
 	{
-		putchar((number);
+		putchar((char)number);
 		number++;
 	}
 	putchar('\n');
