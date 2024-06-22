@@ -14,7 +14,7 @@ int main(void)
 
 	number = 30;
 
-	while (number <= 9)
+	while (number <= 39)
 	{
 		putchar((char)number);
 		number++;
