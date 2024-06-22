@@ -12,9 +12,9 @@ int main(void)
 {
 	int number;
 
-	number = 30;
+	number = 48;
 
-	while (number <= 39)
+	while (number <= 57)
 	{
 		putchar((char)number);
 		number++;
