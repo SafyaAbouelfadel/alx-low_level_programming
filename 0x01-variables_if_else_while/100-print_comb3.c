@@ -19,14 +19,13 @@ int main(void)
 		{
 			putchar(num1);
 			putchar(num2);
-		if (num1 != 56 && num2 != 57)
-		{
-			putchar(',');
-			putchar(' ');
-		
+			if (num1 != 56 || num2 != 57)
+			{
+				putchar(',');
+				putchar(' ');
+			}
 		}
-		}
-	}	
+	}
 	putchar('\n');
 
 	return (0);
