@@ -25,9 +25,8 @@ int main(void)
 		}
 		else
 		{
-			number++
+			number++;
 		}
-
 	}
 	putchar('\n');
 
