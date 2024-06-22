@@ -19,13 +19,15 @@ int main(void)
 		for (num2 = num1 + 1; num2 <= 57; num2++)
 		{
 			for (num3 = num2 + 1; num3 <= 57; num3++)
-			putchar(num1);
-			putchar(num2);
-			putchar(num3);
-			if (num1 != 55 || num2 != 56 || num3 != 57)
 			{
-				putchar(',');
-				putchar(' ');
+				putchar(num1);
+				putchar(num2);
+				putchar(num3);
+				if ({num1 != 55} || (num2 != 56) || (num3 != 57))
+				{
+					putchar(',');
+					putchar(' ');
+				}
 			}
 		}
 	}
