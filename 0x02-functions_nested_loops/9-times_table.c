@@ -21,18 +21,11 @@ void times_table(void)
 			_putchar(' ');
 			sum = num1 * num2;
 			if (sum < 10)
-			{
-			_putchar(sum + 48);
-			}
-			else
-			{
-			_putchar(sum / 10 + 48);
-			_putchar(sum % 10 + 48);
-			}
-
-			if (sum < 10)
 				_putchar(' ');
-			
+
+			else			
+				_putchar(sum / 10 + 48);
+			_putchar(sum % 10 + 48);			
 		}
 	_putchar('\n');
 	}
