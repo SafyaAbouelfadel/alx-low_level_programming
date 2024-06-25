@@ -14,6 +14,8 @@ int main(void)
 {
 	int sum, count;
 
+	sum =o;
+
 	for (count = 0; count < 1024; count++)
 	{
 		if ((count % 3) || (count % 5))
