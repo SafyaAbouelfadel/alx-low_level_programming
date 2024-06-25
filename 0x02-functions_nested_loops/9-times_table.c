@@ -31,13 +31,8 @@ void times_table(void)
 			}
 
 			if (sum < 10)
-			{
 				_putchar(' ');
-			}
-			else
-			{
-				_putchar('\n');
-			}
+			
 		}
 	_putchar('\n');
 	}
