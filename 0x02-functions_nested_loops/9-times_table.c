@@ -14,8 +14,11 @@ void times_table(void)
 
 	for (num1 = 0; num1 <= 9; num1++)
 	{
-		for (num2 = 0; num2 <= 9; num2++)
+		_putchar(48);
+		for (num2 = 1; num2 <= 9; num2++)
 		{
+			_putchar(',');
+			_putchar(' ');
 			sum = num1 * num2;
 			if (sum < 10)
 			{
@@ -26,14 +29,12 @@ void times_table(void)
 			_putchar(sum / 10 + 48);
 			_putchar(sum % 10 + 48);
 			}
-			_putchar(',');
 
-			if ((sum / 10) == 0)
+			if ((sum < 10)
 			{
 				_putchar(' ');
-				_putchar(' ');
 			}
-			else if (num1 == 9 && num2 == 9)
+			else
 			{
 			_putchar('\n');
 			}
