@@ -5,14 +5,14 @@
  *			the alphabet a - z
 */
 
-void main(void)
+void print_alphabet(void)
 {
 	int ch;
 
 	ch = 'a';
 	for (ch = 'a'; ch < 'z'; ch++)
 		_putchar(ch);
-	_putchar(\n);
+	_putchar('\n');
 
 	return (0);
 }
