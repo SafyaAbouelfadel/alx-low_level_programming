@@ -18,7 +18,7 @@ int main(void)
 
 	for (count = 0; count < 1024; count++)
 	{
-		if ((count % 3) || (count % 5))
+		if ((count % 3) == 0 || (count % 5) == 0)
 			sum += count;
 	}
 	printf("%d\n", sum);
