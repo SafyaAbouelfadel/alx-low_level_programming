@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * times_table - prints the n times table
+ * print_times_table - prints the n times table
  *
  * @n: take integer input for function
  * Example Table
@@ -24,14 +24,14 @@ void print_times_table(int n)
 			_putchar(' ');
 
 			sum = num1 * num2;
-			if (sum < 10)
+			if (sum <= 9)
 				_putchar(' ');
 			if (sum <= 99)
 				_putchar(' ');
 			if (sum >= 100)
 			{
 				_putchar((sum / 100) + 48);
-				_putchar((sum / 10) + 48);
+				_putchar((sum / 10) % 10 + 48);
 			}
 			else if (sum <= 99 && sum >= 10)
 				_putchar((sum / 10) + 48);
