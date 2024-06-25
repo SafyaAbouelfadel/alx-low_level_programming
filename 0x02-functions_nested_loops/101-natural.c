@@ -14,10 +14,12 @@ int main(void)
 {
 	int sum, count;
 
-	for (count = 0; cunt < 1024; count++)
+	for (count = 0; count < 1024; count++)
 	{
 		if ((count % 3) || (count % 5))
 			sum += count;
 	}
-	pintf("%d\n", sum);
+	printf("%d\n", sum);
+
+	return (0);
 }
