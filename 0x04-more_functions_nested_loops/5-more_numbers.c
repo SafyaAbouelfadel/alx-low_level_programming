@@ -19,6 +19,7 @@ int more_numbers(void)
 				_putchar((num / 10) + 48);
 			_putchar((num % 10) + 48);
 		}
-	_putchar('\n');
+	if (times != 9)
+		_putchar('\n');
 	}
 }
