@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * main - Entry point
+ * _isupper - Entry point
  *
  * Description: checks for uppercase character
  *
