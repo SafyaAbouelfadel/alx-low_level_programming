@@ -7,7 +7,7 @@
  * Return: 0 (Success)
 */
 
-int more_numbers(void)
+void more_numbers(void)
 {
 	int num, times;
 
@@ -16,10 +16,11 @@ int more_numbers(void)
 		for (num = 0; num <= 14; num++)
 		{
 			if (num >= 10)
+			{
 				_putchar((num / 10) + 48);
+			}
 			_putchar((num % 10) + 48);
 		}
-	if (times != 9)
 		_putchar('\n');
 	}
 }
