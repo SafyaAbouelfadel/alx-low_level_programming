@@ -12,7 +12,7 @@ void print_diagonal(int n)
 {
 	int num, lines, phyramid;
 
-	phyramid = 1;
+	phyramid = 0;
 
 	if (n > 0)
 	{
