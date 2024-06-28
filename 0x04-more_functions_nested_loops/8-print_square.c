@@ -5,7 +5,7 @@
  *		followed by a new line.
  *@size: takes input for the size of
  *		the square
- * 
+ *
  * Return: 0 (Success)
 */
 
