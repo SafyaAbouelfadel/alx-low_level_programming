@@ -32,6 +32,8 @@ int main(void)
 	/* If num is still greater than 2, then num is a prime number */
 	if (num > 2)
 		max_prime = num;
-		printf("%ld\n", max_prime);
+
+	printf("%ld\n", max_prime);
+
 	return (0);
 }
