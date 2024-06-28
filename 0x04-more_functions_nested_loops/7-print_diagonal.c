@@ -24,8 +24,8 @@ void print_diagonal(int n)
 			}
 		phyramid++;
 		_putchar(92);
-		}
 		_putchar('\n');
+		}
 	}
 	else
 		_putchar('\n');
