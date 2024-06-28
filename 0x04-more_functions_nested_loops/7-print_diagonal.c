@@ -18,7 +18,7 @@ void print_diagonal(int n)
 	{
 		for (num = 0; num < n; num++)
 		{
-			for (lines = 0; lines <= phyramid; lines++)
+			for (lines = 0; lines < phyramid; lines++)
 			{
 				_putchar(' ');
 			}
