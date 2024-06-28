@@ -13,12 +13,17 @@ void print_square(int size)
 {
 	int num, times;
 
-	for (times = 0; times < size; times++)
+	if (size > 0)
 	{
-		for (num = 0; num < size; num++)
+		for (times = 0; times < size; times++)
 		{
-			_putchar(35);
+			for (num = 0; num < size; num++)
+			{
+				_putchar(35);
+			}
+		_putchar('\n');
 		}
-	_putchar('\n');
 	}
+	else
+		_putchar('\n');
 }
