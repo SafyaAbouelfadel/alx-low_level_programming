@@ -8,6 +8,7 @@
 
 void rev_string(char *s)
 {
+	int i;
 	int length = 0;
 
 	while (s[length] != 0)
