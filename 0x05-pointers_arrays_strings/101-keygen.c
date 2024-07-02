@@ -13,7 +13,7 @@
 int main(void)
 {
 	char arr;
-	int sum, num, i;
+	int sum, num;
 
 	sum = 0;	
 
