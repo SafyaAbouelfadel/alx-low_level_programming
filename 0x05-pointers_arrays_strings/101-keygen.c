@@ -12,7 +12,7 @@
 
 int main(void)
 {
-	int arr[100];
+	char arr;
 	int sum, num, i;
 
 	sum = 0;	
@@ -21,14 +21,14 @@ int main(void)
 
 	while (sum < 2600)
 	{
-		arr[i] = rand() % 120;
-		sum += (arr[i]);
-		putchar(arr[i]);
+		arr = rand() % 120;
+		sum += arr;
+		putchar(arr);
 		if ((2772 - sum)  < 120)
 		{
-			num = 2772 - sum - '0';
+			num = 2772 - sum;
 			sum += num;
-			putchar(num + '0');
+			putchar(num);
 			break;
 		}
 	}
