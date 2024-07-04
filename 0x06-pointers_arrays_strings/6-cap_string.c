@@ -12,7 +12,7 @@ char *cap_string(char *str)
 {
 	char *cap_str = str;
 	int i, c;
-	char * spec[12] = {' ', '\t', '\n', ',', ';', '.', '!', '?', '"', '(', ')', '{','}'}
+	char spec[] = " \t\n,;.!?\"(){}";
 
 	for (i = 0; str[i] != 0; i++)
 	{
@@ -20,11 +20,11 @@ char *cap_string(char *str)
 		{
 			str[i] -= 32;
 		}
-		for (c = 0; c <= 12; c++)
+		for (c = 0; c <= 13; c++)
 		{
 			if (str[i] == spec[c])
 			{
-				if (str[i] >= 97 && str[i] <= 122)
+				if (str[i + 1] >= 97 && str[i + 1] <= 122)
 				{
 					str[i + 1] -= 32;
 				}
