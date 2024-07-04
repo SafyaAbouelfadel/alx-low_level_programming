@@ -21,6 +21,7 @@ char *leet(char *s)
 			if (*s == key[i])
 			{
 				*s = value[i];
+				break;
 			}
 		}
 	s++;
