@@ -13,15 +13,17 @@ char *leet(char *s)
 
 	char *key = "aAeEoOtTlL";
 	char *value = "4433007711";
+
 	while (*s != '\0')
 	{
 		for (i = 0; i < 10; i++)
 		{
-			if ( *s == key[i])
+			if (*s == key[i])
 			{
-				*s = value + 48;
+				*s = value[i];
 			}
 		}
 	s++;
 	}
+	return (s);
 }
