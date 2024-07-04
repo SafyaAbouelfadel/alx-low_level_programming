@@ -11,8 +11,8 @@ char *leet(char *s)
 {
 	int i;
 
-	char *key = "aAeEoOtTlL";
-	char *value = "4433007711";
+	char key[] = "aAeEoOtTlL";
+	char value[] = "4433007711";
 
 	while (*s != '\0')
 	{
