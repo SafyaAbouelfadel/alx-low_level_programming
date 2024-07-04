@@ -10,6 +10,7 @@
 char *leet(char *s)
 {
 	int i;
+	char *orig = s;
 
 	char key[] = "aAeEoOtTlL";
 	char value[] = "4433007711";
@@ -26,5 +27,5 @@ char *leet(char *s)
 		}
 	s++;
 	}
-	return (s);
+	return (orig);
 }
