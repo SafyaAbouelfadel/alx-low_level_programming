@@ -7,10 +7,11 @@
  *
  * @size: the size of the matrix (number of rows/columns)
 */
+
 void print_diagsums(int *a, int size)
 {
 	int row;
-	int sum1 = 0, sum2 = 0;
+	unsigned int sum1 = 0, sum2 = 0;
 
 	for (row = 0; row < size; row++)
 	{
@@ -19,4 +20,3 @@ void print_diagsums(int *a, int size)
 	}
 	printf("%d, %d\n", sum1, sum2);
 }
-
