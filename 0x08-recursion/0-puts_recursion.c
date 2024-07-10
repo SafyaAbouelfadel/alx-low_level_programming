@@ -1,4 +1,4 @@
-#include "main_h"
+#include "MAIN_H"
 
 /**
  * _puts_recursion - prints a string followed by a new line
