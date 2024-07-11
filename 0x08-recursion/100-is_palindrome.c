@@ -27,10 +27,11 @@ int is_palindrome(char *s)
 int _strlen_recursion(char *s)
 {
 	if (*s != '\0')
-	{
 		return (1 + _strlen_recursion(s + 1));
-	}
+
+	return (0);
 }
+
 /**
  * _is_pali - checks recursively the characters for palindrome
  * @s: string to check
@@ -47,5 +48,5 @@ int _is_pali(char *s, int itr, int length)
 	if (itr >= length)
 		return (1);
 
-	return (_is_pali(s, itr + 1, len - 1));
+	return (_is_pali(s, itr + 1, length - 1));
 }
