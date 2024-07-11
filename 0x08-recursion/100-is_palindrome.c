@@ -47,5 +47,5 @@ int _is_pali(char *s, int itr, int length)
 	if (itr >= length)
 		return (1);
 
-	return (is_pali(s, itr + 1, len - 1));
+	return (_is_pali(s, itr + 1, len - 1));
 }
