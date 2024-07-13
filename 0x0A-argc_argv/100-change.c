@@ -4,11 +4,12 @@
 
 /**
  * main - prints the minimum number of coins to
- * make change for an amount of money
+ *	make change for an amount of money
+ *
  * @argc: number of arguments
  * @argv: array of arguments
  *
- * Return: 0 (Success), 1 (Error)
+ * Return: 0 (Success), or 1 (Error)
  */
 int main(int argc, char *argv[])
 {
@@ -20,11 +21,11 @@ int main(int argc, char *argv[])
 
 	for (i = 0; i < 5; i++)
 	{
-		if (num >= coins[j])
+		if (num >= coins[i])
 		{
-			least += num / cents[i];
+			least += num / coints[i];
 			num = num % coins[i];
-			if (num % cents[i] == 0)
+			if (num % coins[i] == 0)
 			{
 				break;
 			}
