@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "main.h"
 
 /**
  * main - prints the minimum number of coins to
@@ -27,7 +26,7 @@ int main(int argc, char *argv[])
 			num = num % coins[i];
 		}
 	}
-	printf("%d\n", least);
+		printf("%d\n", least);
 	}
 	else
 	{
