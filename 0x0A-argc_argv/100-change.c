@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 {
 	if (argc == 2)
 	{
-	int i, least;
+	int i, least = 0;
 	int num = atoi(argv[1]);
 	int coins[] = {25, 10, 5, 2, 1};
 
@@ -23,12 +23,8 @@ int main(int argc, char *argv[])
 	{
 		if (num >= coins[i])
 		{
-			least += num / coints[i];
+			least += num / coins[i];
 			num = num % coins[i];
-			if (num % coins[i] == 0)
-			{
-				break;
-			}
 		}
 	}
 	printf("%d\n", least);
