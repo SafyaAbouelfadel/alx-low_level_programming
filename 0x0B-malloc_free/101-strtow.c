@@ -45,7 +45,7 @@ char **strtow(char *str)
 	words = (char **)malloc((num_words + 1) * sizeof(char *));
 	if (words == NULL)
 		return (NULL);
-	for (i = 0, k = 0; i < num_words; i++)
+	for (i = 0; i < num_words; i++)
 	{
 	while (*str == ' ')
 		str++;
