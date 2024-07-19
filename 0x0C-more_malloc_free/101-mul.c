@@ -3,6 +3,7 @@
 #include <ctype.h>
 #include <string.h>
 #include "main.h"
+
 /**
  * is_digit - checks if a string contains only digits
  * @s: string to check
@@ -61,18 +62,16 @@ char *multiply(char *num1, char *num2)
 	int len1 = _strlen(num1);
 	int len2 = _strlen(num2);
 	int i, j, carry, n1, n2, sum;
-	char *result;
-	char *orig_result;
+	char *result, *start, *final_result;
 
 	result = malloc(len1 + len2 + 1);
+
 	if (result == NULL)
 		return (NULL);
 
 	for (i = 0; i < len1 + len2; i++)
 		result[i] = '0';
 	result[len1 + len2] = '\0';
-
-	orig_result = result;
 
 	for (i = len1 - 1; i >= 0; i--)
 	{
@@ -88,14 +87,15 @@ char *multiply(char *num1, char *num2)
 		}
 		result[i + j + 1] += carry;
 	}
+	start = result;
 
-	while (*result == '0' && *(result + 1))
-	result++;
+	while (*start == '0' && *(start + 1) != '\0')
+		start++;
 
-	if (result == orig_result)
-	return (strdup(result));
-	else
-		return (strdup(result));
+	final_result = strdup(start);
+	free(result);
+
+	return (final_result);
 }
 
 /**
