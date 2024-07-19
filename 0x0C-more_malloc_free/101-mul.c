@@ -1,11 +1,11 @@
-#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
-
+#include <string.h>
+#include "main.h"
 /**
  * is_digit - checks if a string contains only digits
- * @str: string to check
+ * @s: string to check
  *
  * Return: 1 if the string contains only digits, 0 otherwise
  */
@@ -58,11 +58,11 @@ int _strlen(char *s)
  */
 char *multiply(char *num1, char *num2)
 {
-	int len1 = 0, len2 = 0, i, j, carry, n1, n2, sum;
+	int len1 = _strlen(num1);
+	int len2 = _strlen(num2);
+	int i, j, carry, n1, n2, sum;
 	char *result;
-
-	len1 = _strlen(s1);
-	len2 = _strlen(s2);
+	char *orig_result;
 
 	result = malloc(len1 + len2 + 1);
 	if (result == NULL)
@@ -71,6 +71,8 @@ char *multiply(char *num1, char *num2)
 	for (i = 0; i < len1 + len2; i++)
 		result[i] = '0';
 	result[len1 + len2] = '\0';
+
+	orig_result = result;
 
 	for (i = len1 - 1; i >= 0; i--)
 	{
@@ -83,14 +85,17 @@ char *multiply(char *num1, char *num2)
 			sum = n1 * n2 + (result[i + j + 1] - '0') + carry;
 			carry = sum / 10;
 			result[i + j + 1] = (sum % 10) + '0';
-	        }
+		}
 		result[i + j + 1] += carry;
 	}
 
-	for (i = 0; result[i] == '0' && result[i + 1]; i++)
-	;
+	while (*result == '0' && *(result + 1))
+	result++;
 
-	return (result + i);
+	if (result == orig_result)
+	return (strdup(result));
+	else
+		return (strdup(result));
 }
 
 /**
@@ -100,33 +105,6 @@ char *multiply(char *num1, char *num2)
  *
  * Return: 0 on success
  */
-int main(int argc, char *argv[])
-{
-    char *result;
-
-    if (argc != 3)
-        print_error_and_exit();
-
-    if (!is_digit(argv[1]) || !is_digit(argv[2]))
-        print_error_and_exit();
-
-    result = multiply(argv[1], argv[2]);
-    if (result == NULL)
-        print_error_and_exit();
-
-    printf("%s\n", result);
-
-    free(result - (result[0] == '0' ? 1 : 0));
-    return (0);
-}
-/**
- * main - Entry point
- * @argc: number of arguments
- * @argv: array of arguments
- *
- * Return: 0 on success
- */
-
 int main(int argc, char *argv[])
 {
 	char *result;
@@ -143,6 +121,7 @@ int main(int argc, char *argv[])
 
 	printf("%s\n", result);
 
-	free(result - (result[0] == '0' ? 1 : 0));
+	free(result);
+
 	return (0);
 }
