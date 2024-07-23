@@ -57,6 +57,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	leng1 = _strlen(name);
 	leng2 = _strlen(owner);
+
 	/* if name and owner are NULL and age is negative return NULL */
 	if (!name || age < 0 || !owner)
 		return (NULL);
@@ -79,7 +80,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 	dog->name = _strcpy(dog->name, name);
-	dog->owner =_strcpy(dog->owner, owner);
+	dog->owner = _strcpy(dog->owner, owner);
 	dog->age = age;
 
 	return (dog);
