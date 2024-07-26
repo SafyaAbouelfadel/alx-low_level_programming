@@ -52,7 +52,7 @@ void format_string(char *separator, va_list list)
 */
 void print_all(const char * const format, ...)
 {
-        int i = 0, a;
+	int i = 0, a;
 	char *separator = "";
 	va_list list;
 	token_t tokens[] = {
@@ -71,7 +71,7 @@ void print_all(const char * const format, ...)
 		{
 			if (format[i] == tokens[a].token[0])
 			{
-				tokens[a].f(separator,list);
+				tokens[a].f(separator, list);
 				separator = ", ";
 			}
 			a++;
