@@ -7,7 +7,7 @@
 */
 void format_char(char *separator, va_list list)
 {
-	printf("%s%c", seperator, va_arg(list, int);
+	printf("%s%c", separator, va_arg(list, int));
 }
 
 /**
@@ -17,7 +17,7 @@ void format_char(char *separator, va_list list)
 */
 void format_int(char *separator, va_list list)
 {
-        printf("%s%d", seperator, va_arg(list, int);
+	printf("%s%d", separator, va_arg(list, int));
 }
 
 /**
@@ -27,7 +27,7 @@ void format_int(char *separator, va_list list)
 */
 void format_float(char *separator, va_list list)
 {
-        printf("%s%f", seperator, va_arg(list, int);
+	printf("%s%f", separator, va_arg(list, double));
 }
 
 /**
@@ -43,7 +43,7 @@ void format_string(char *separator, va_list list)
 		case 1:
 			str = "(nil)";
 
-        printf("%s%s", seperator, va_arg(list, int);
+	printf("%s%s", separator, str);
 }
 
 /**
@@ -54,7 +54,7 @@ void print_all(const char * const format, ...)
 {
         int i = 0, a;
 	char *separator = "";
-	va_list list:
+	va_list list;
 	token_t tokens[] = {
 		{"c", format_char},
 		{"i", format_int},
