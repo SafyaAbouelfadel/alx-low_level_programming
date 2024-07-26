@@ -18,7 +18,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		return;
 	}
 	va_start(list, n);
-	
+
 	while (i--)
 	{
 		s = va_arg(list, char *);
