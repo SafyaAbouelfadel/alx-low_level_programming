@@ -25,4 +25,5 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		printf("%s%s", s ? s : "(nil)",
 			i ? (separator ? separator : "") : "\n");
 	}
+	va_end(list);
 }
