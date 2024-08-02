@@ -3,9 +3,9 @@ section		.text
 	global	main
 
 main:
-	mov		edi, stg
+	mov		edi, ab
 	mov		eax, 0
 	call	pritf
 
-section		.data
-	stg db 'Hello, Holberton', 0xa, 0
+section 	.data
+	ab db 'Hello, Holberton', 0xa, 0
