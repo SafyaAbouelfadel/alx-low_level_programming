@@ -15,7 +15,7 @@ list_t *add_node(list_t **head, const char *str)
 		return (NULL);
 	if (str)
 	{
-		new_h->str = strup(str);
+		new_h->str = strdup(str);
 		if (!new_h->str)
 		{
 			free(new_h);
