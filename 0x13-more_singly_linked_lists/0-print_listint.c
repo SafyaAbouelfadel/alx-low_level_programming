@@ -2,7 +2,7 @@
 
 /**
  * print_listint - prints a linked lists
- * @h: pointer to first node
+ * @h: pointer to head of the list
  *
  * Return: size of list
  */
@@ -11,7 +11,7 @@ size_t print_listint(const listint_t *h)
 {
 	size_t n = 0;
 
-	while (h)
+	while (h != NULL)
 	{
 		printf("%d\n", h->n);
 		n++;
