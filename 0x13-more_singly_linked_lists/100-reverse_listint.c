@@ -1,61 +1,26 @@
 #include "lists.h"
-#include <stdlib.h>
-#include <stdio.h>
 
 /**
- * _reall - reallocates memory for an array of pointers
- * to the nodes in a linked list
- * @list: the old list to append
- * @size: size of the new list (always one more than the old list)
- * @new: new node to add to the list
+ * reverse_listint - reverses an int list
+ * @head: address of pointer to first node
  *
- * Return: pointer to the new list
+ * Return: address of head
  */
-const listint_t **_reall(const listint_t **list, size_t size, const listint_t *new)
+listint_t *reverse_listint(listint_t **head)
 {
-	const listint_t **newlist;
-	size_t i;
+	listint_t *node = NULL, *next = NULL;
 
-	newlist = malloc(size * sizeof(listint_t *));
-	if (newlist == NULL)
+	if (!head || !*head)
+		return (NULL);
+
+	node = *head;
+	*head = NULL;
+	while (node)
 	{
-		free(list);
-		exit(98);
+		next = node->next;
+		node->next = *head;
+		*head = node;
+		node = next;
 	}
-	for (i = 0; i < size - 1; i++)
-		newlist[i] = list[i];
-	newlist[i] = new;
-	free(list);
-	return (newlist);
-}
-
-/**
- * print_listint_safe - prints a listint_t linked list.
- * @head: pointer to the start of the list
- *
- * Return: the number of nodes in the list
- */
-size_t print_listint_safe(const listint_t *head)
-{
-	size_t i, number = 0;
-	const listint_t **list = NULL;
-
-	while (head != NULL)
-	{
-		for (i = 0; i < number; i++)
-		{
-			if (head == list[i])
-			{
-				printf("-> [%p] %d\n", (void *)head, head->n);
-				free(list);
-				return (number);
-			}
-		}
-		number++;
-		list = _reall(list, number, head);
-		printf("[%p] %d\n", (void *)head, head->n);
-		head = head->next;
-	}
-	free(list);
-	return (number);
+	return (*head);
 }
