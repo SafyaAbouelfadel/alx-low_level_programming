@@ -2,8 +2,8 @@
 
 #define USAGE "Usage: cp file_from file_to\n"
 #define ERROR_READ "Error: Can't read from file %s\n"
-#define ERROR_WRITE "Error: Can't write to file %s\n"
-#define ERROR_CLOSE "Error: Can't close file descriptor %d\n"
+#define ERROR_WRITE "Error: Can't write to %s\n"
+#define ERROR_CLOSE "Error: Can't close fd %d\n"
 #define FILE_PERMISSIONS (S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH)
 
 /**
@@ -30,7 +30,7 @@ int main(int argc, char **argv)
 	if (desti_fd == -1)
 		dprintf(STDERR_FILENO, ERROR_WRITE, argv[2]), exit(99);
 
-	while ((bytes_read = read(source_fd, buffer, READ_BUF_SIZE)) > 0)
+	while ((bytes_read = read(source_fd, buffer, READ_BUFF_SIZE)) > 0)
 	{
 		if (write(desti_fd, buffer, bytes_read) != bytes_read)
 			dprintf(STDERR_FILENO, ERROR_WRITE, argv[2]), exit(99);
