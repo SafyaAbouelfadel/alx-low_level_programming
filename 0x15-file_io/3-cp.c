@@ -43,7 +43,7 @@ int main(int argc, char **argv)
 	desti_fd = close(desti_fd);
 	if (source_fd)
 		dprintf(STDERR_FILENO, ERROR_CLOSE, source_fd), exit(100);
-	if (destination_fd)
+	if (desti_fd)
 		dprintf(STDERR_FILENO, ERROR_CLOSE, desti_fd), exit(100);
 
 	return (EXIT_SUCCESS);
