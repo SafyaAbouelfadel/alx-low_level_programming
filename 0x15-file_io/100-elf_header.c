@@ -66,7 +66,8 @@ void print_data(Elf64_Ehdr elf_header)
  */
 void print_version(Elf64_Ehdr elf_header)
 {
-	printf("  Version:                           %d", elf_header.e_ident[EI_VERSION]);
+	printf("  Version:                           %d",
+		 elf_header.e_ident[EI_VERSION]);
 	switch (elf_header.e_ident[EI_VERSION])
 	{
 		case EV_CURRENT:
@@ -80,7 +81,8 @@ void print_version(Elf64_Ehdr elf_header)
 }
 
 /**
- * print_osabi - Prints the operating system and ABI (Application Binary Interface).
+ * print_osabi - Prints the operating system and ABI
+ *		(Application Binary Interface).
  * @elf_header: The ELF header struct.
  */
 void print_osabi(Elf64_Ehdr elf_header)
@@ -123,7 +125,8 @@ void print_osabi(Elf64_Ehdr elf_header)
 }
 
 /**
- * print_additional_osabi - Prints additional OS/ABI types if not covered in print_osabi.
+ * print_additional_osabi - Prints additional OS/ABI types
+ *		if not covered in print_osabi.
  * @elf_header: The ELF header struct.
  */
 void print_additional_osabi(Elf64_Ehdr elf_header)
@@ -154,11 +157,13 @@ void print_additional_osabi(Elf64_Ehdr elf_header)
  */
 void print_abiversion(Elf64_Ehdr elf_header)
 {
-	printf("  ABI Version:                       %d\n", elf_header.e_ident[EI_ABIVERSION]);
+	printf("  ABI Version:                       %d\n",
+		elf_header.e_ident[EI_ABIVERSION]);
 }
 
 /**
- * print_type - Prints the type of the ELF file (e.g., executable, shared object).
+ * print_type - Prints the type of the ELF file
+ *		(e.g., executable, shared object).
  * @elf_header: The ELF header struct.
  */
 void print_type(Elf64_Ehdr elf_header)
@@ -187,7 +192,8 @@ void print_type(Elf64_Ehdr elf_header)
 			printf("CORE (Core file)");
 			break;
 		default:
-			printf("<unknown>: %x", type_pointer[data_encoding_offset]);
+			printf("<unknown>: %x",
+				type_pointer[data_encoding_offset]);
 			break;
 	}
 	printf("\n");
@@ -268,7 +274,8 @@ int main(int argc, char **argv)
 	print_entry(elf_header);
 
 	if (close(file_descriptor))
-		dprintf(STDERR_FILENO, "Error closing file descriptor: %d\n", file_descriptor), exit(98);
+		dprintf(STDERR_FILENO,
+	"Error closing file descriptor: %d\n", file_descriptor), exit(98);
 
 	return (EXIT_SUCCESS);
 }
