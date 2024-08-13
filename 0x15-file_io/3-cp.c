@@ -1,6 +1,6 @@
 #include "main.h"
 
-#define USAGE "Usage: cp source_file destination_file\n"
+#define USAGE "Usage: cp file_from file_to\n"
 #define ERROR_READ "Error: Can't read from file %s\n"
 #define ERROR_WRITE "Error: Can't write to file %s\n"
 #define ERROR_CLOSE "Error: Can't close file descriptor %d\n"
