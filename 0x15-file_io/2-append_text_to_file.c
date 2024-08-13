@@ -20,7 +20,7 @@ int _str_len(char *s)
 
 /**
  * append_text_to_file - appends text to a file
- * @filename: name of file to create
+ * @filename: name of the file to create
  * @text_content: text to write
  *
  * Return: 1 on success 0 on failure
