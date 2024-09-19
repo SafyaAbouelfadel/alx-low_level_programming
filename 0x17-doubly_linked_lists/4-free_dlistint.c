@@ -3,7 +3,7 @@
 /**
  * free_dlistint - freeas a list
  *
- * @haed: address of the head
+ * @head: address of the head
  *
  * Return: void
 */
