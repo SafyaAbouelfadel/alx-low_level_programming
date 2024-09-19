@@ -9,6 +9,8 @@
 */
 size_t print_dlistint(const dlistint_t *h)
 {
+	size_t k;
+
 	if (h == 0)
 		return (0);
 
