@@ -53,7 +53,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	temp = ht->array[index];
 	while (temp != NULL)
 	{
-		if (strcmp(tmp->key, key) == 0)
+		if (strcmp(temp->key, key) == 0)
 		{
 			new_value = strdup(value);
 			if (new_value == NULL)
